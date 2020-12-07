@@ -11,7 +11,7 @@ int check_cycle(listint_t *list)
 
 	if (list)
 	{
-		while (list && head)
+		while (list && head->next)
 		{
 			list = list->next;
 			head = head->next->next;

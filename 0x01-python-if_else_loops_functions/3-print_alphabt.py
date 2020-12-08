@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-letter = ord("a")
-while letter <= ord("z"):
-    if letter != ord("q") and letter != ord("e"):
-        print(chr(letter), end="")
-    letter += 1
+for n in range(0, ((ord("z") - ord("a")) + 1)):
+    if (ord("a") + n) != ord("q") and (ord("a") + n) != ord("e"):
+        print("{}".format(chr(ord("a") + n)), end="")

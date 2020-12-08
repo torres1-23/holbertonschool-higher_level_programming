@@ -8,6 +8,4 @@ elif ld == 0:
     str = "and is 0"
 else:
     str = "and is less than 6 and not 0"
-if number < 0:
-    ld *= -1
 print("Last digit of {:d} is {:d} {}".format(number, ld, str))

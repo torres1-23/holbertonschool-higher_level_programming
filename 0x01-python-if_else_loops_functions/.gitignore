@@ -1,5 +1,6 @@
 # ignore these files
 *~
 *main.py
+*main.c
 __pycache__
 linked_lists.c

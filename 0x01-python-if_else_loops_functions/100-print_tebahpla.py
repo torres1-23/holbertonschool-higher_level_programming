@@ -4,4 +4,4 @@ for n in range(ord("z"), ord("a") - 1, -1):
         letter = chr(n)
     else:
         letter = chr(n - (ord("a") - ord("A")))
-    print(letter, end="")
+    print("{}".format(letter), end="")

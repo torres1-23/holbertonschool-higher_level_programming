@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-dir({['#pythoniscool', 'a']})
+import os; os.write(1, b'#pythoniscool\n')

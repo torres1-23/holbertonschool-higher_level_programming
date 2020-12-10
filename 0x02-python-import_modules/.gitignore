@@ -1,0 +1,5 @@
+# ignore temporary emacs files
+*~
+add_0.py
+0-import_add.py
+__pycache__

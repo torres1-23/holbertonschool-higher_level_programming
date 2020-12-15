@@ -4,3 +4,6 @@ __pycache__
 *-main.py
 *-main.c
 linked_lists.c
+a.out
+*.so
+*test_lists.py

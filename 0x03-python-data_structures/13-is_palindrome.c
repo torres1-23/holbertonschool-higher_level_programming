@@ -13,8 +13,9 @@ int is_palindrome(listint_t **head)
 
 	if (*head)
 	{
-		for (i = 0; tmp; i++)
+		for (i = 1; tmp; i++)
 			tmp = tmp->next;
+		i--;
 		if (i == 1)
 			return (1);
 		if (i % 2 != 0)
@@ -23,7 +24,7 @@ int is_palindrome(listint_t **head)
 		if (!num)
 			return (-1);
 		tmp = *head;
-		for (j = 0; j < i; j++)
+		for (j = 0; tmp; j++)
 		{
 			num[j] = tmp->n;
 			tmp = tmp->next;

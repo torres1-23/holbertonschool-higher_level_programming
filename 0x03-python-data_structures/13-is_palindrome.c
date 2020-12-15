@@ -12,27 +12,24 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp = *head;
 	int *num = NULL, i, j;
 
-	if (*head)
+	if (*head == NULL)
+		return (1);
+	for (i = 1; tmp->next; i++)
+		tmp = tmp->next;
+	num = malloc(sizeof(int) * i);
+	tmp = *head;
+	for (j = 0; j < i; j++)
 	{
-		for (i = 1; tmp->next; i++)
-			tmp = tmp->next;
-		num = malloc(sizeof(int) * i);
-		if (!num)
-			return (-1);
-		tmp = *head;
-		for (j = 0; j < i; j++)
+		num[j] = tmp->n;
+		tmp = tmp->next;
+	}
+	for (j = 0; j < i; j++)
+	{
+		if (num[j] != num[i - 1])
 		{
-			num[j] = tmp->n;
-			tmp = tmp->next;
+			return (0);
 		}
-		for (j = 0; j < i; j++)
-		{
-			if (num[j] != num[i - 1])
-			{
-				return (0);
-			}
-			i--;
-		}
+		i--;
 	}
 	return (1);
 }

@@ -19,7 +19,7 @@ int is_palindrome(listint_t **head)
 		if (!num)
 			return (0);
 		tmp = *head;
-		for (j = 0; j < i; j++)
+		for (j = 0; tmp; j++)
 		{
 			num[j] = tmp->n;
 			tmp = tmp->next;

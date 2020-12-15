@@ -15,9 +15,10 @@ int is_palindrome(listint_t **head)
 	{
 		for (i = 0; tmp; i++)
 			tmp = tmp->next;
+		printf("%d\n", i);
 		num = malloc(sizeof(int) * i - 1);
 		if (!num)
-			return (1);
+			return (-1);
 		tmp = *head;
 		for (j = 0; tmp; j++)
 		{

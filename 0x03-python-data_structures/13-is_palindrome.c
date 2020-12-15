@@ -21,12 +21,12 @@ int is_palindrome(listint_t **head)
 		if (!num)
 			return (-1);
 		tmp = *head;
-		for (j = 0; j <= i; j++)
+		for (j = 0; tmp; j++)
 		{
 			num[j] = tmp->n;
 			tmp = tmp->next;
 		}
-		for (j = 0; j <= i; j++)
+		for (j = 0; j < i; j++)
 		{
 			if (num[j] != num[i - 1])
 			{

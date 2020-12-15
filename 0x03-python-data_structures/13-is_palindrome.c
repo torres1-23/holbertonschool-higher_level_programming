@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 
 	if (*head)
 	{
-		for (i = 1; tmp; i++)
+		for (i = 0; tmp; i++)
 			tmp = tmp->next;
 		if (i == 1)
 			return (1);
@@ -28,7 +28,7 @@ int is_palindrome(listint_t **head)
 			num[j] = tmp->n;
 			tmp = tmp->next;
 		}
-		for (j = 0; j < i; j++)
+		for (j = 0; j < i - 1; j++)
 		{
 			if (num[j] != num[i - 1])
 			{

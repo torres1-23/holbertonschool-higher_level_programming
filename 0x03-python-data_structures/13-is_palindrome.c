@@ -15,7 +15,7 @@ int is_palindrome(listint_t **head)
 	{
 		for (i = 0; tmp; i++)
 			tmp = tmp->next;
-		if (i == 2)
+		if (i <= 1)
 			return (1);
 		if (i % 2 != 0)
 			return (0);

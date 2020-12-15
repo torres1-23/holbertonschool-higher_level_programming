@@ -26,10 +26,14 @@ int is_palindrome(listint_t **head)
 		}
 		for (j = 0; j < i; j++)
 		{
-			if (num[j] != num[i - 1])
+			if (num[j] != num[i])
+			{
+				free(num);
 				return (0);
+			}
 			i--;
 		}
+		free(num);
 	}
 	return (1);
 }

@@ -4,4 +4,4 @@ def multiple_returns(sentence):
         string and its first character. """
     if (sentence != ""):
         return len(sentence), sentence[0]
-    return None, 0
+    return 0, None

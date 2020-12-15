@@ -13,10 +13,9 @@ int is_palindrome(listint_t **head)
 
 	if (*head)
 	{
-		for (i = 1; tmp; i++)
+		for (i = 0; tmp; i++)
 			tmp = tmp->next;
-		i--;
-		if (i == 1)
+		if (i == 2)
 			return (1);
 		if (i % 2 != 0)
 			return (0);

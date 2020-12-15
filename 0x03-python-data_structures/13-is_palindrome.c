@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -30,12 +29,10 @@ int is_palindrome(listint_t **head)
 		{
 			if (num[j] != num[i - 1])
 			{
-				free(num);
 				return (0);
 			}
 			i--;
 		}
-		free(num);
 	}
 	return (1);
 }

@@ -1,0 +1,5 @@
+# ignore temporary emacs files
+*~
+__pycache__
+*-main.py
+*-main.c

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
+    """  Returns the weighted average of all integers tuple. """
     sum_s = 0
     sum_w = 0
     if my_list:

@@ -1,5 +1,4 @@
 # ignore these files
 *~
-main.py
-main.pyc
+*main.py
 __pycache__

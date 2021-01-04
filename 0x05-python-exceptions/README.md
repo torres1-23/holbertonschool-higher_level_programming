@@ -2,7 +2,7 @@
 >These files solve problems involving python exceptions.
 
 ## Tests :heavy_check_mark::
-[tests](./tests): All main files used to test the functions are located in the tests folder, each file name is preceeded with the number of each task (i.e for task 0 the main file is (./tests/0-main.py)).
+[tests](./tests): All main files used to test the functions are located in the tests folder, each file name is preceeded with the number of each task (i.e for task 0 the main file is [0-main.py](./tests/0-main.py)).
 ## Taks :page_with_curl: :
 * Mandatory:
   * **[0-safe_print_list.py](./0-safe_print_list.py):**

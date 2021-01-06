@@ -56,7 +56,7 @@ class Node:
         Attributes:
             __next_node (Node): next node of current node.
         """
-        if not self:
+        if not self and value:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 

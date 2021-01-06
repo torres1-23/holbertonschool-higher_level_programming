@@ -38,7 +38,7 @@
         * methods getter and setter with validation for position.
 * Advanced:
   * **[7. Singly linked list:](./100-singly_linked_list.py)**
-    Class Node that defines a node of a singly linked list with:
+Class Node that defines a node of a singly linked list with:
     * data attribute.
     * methods getter and setter with validation for data.
     * next_node attribute.

@@ -52,11 +52,11 @@ class Node:
     def next_node(self, value):
         """Sets the next node of the current node.
         Args:
-            value (int): next node of current node.
+            value (Node): next node of current node.
         Attributes:
             __next_node (Node): next node of current node.
         """
-        if not self and value:
+        if not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 

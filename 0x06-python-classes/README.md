@@ -42,8 +42,8 @@
     * data attribute.
     * methods getter and setter with validation for data.
     * next_node attribute.
-    * methods getter and setter with validation for next_node.
-Class SinglyLinkedList that defines a singly linked list with:
+    * methods getter and setter with validation for next_node.\
+  Class SinglyLinkedList that defines a singly linked list with:
     * head attribute.
     * method to handle print().
     * method to insert new nodes by sorted data.

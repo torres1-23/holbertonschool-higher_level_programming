@@ -10,12 +10,10 @@ class Node:
         """Initializes instance of a node.
 
         Args:
-
             data (int): data of each node.
             next_node (Node): next node of new node.
 
         Attributes:
-
             data (method): sets the node data.
             next_node (method): sets the next node to point.
         """
@@ -27,7 +25,6 @@ class Node:
         """Gets the node data.
 
         Returns:
-
             Current node data.
         """
         return self.__data
@@ -37,11 +34,9 @@ class Node:
         """Sets a square size.
 
         Args:
-
             value (int): node data.
 
         Attributes:
-
             __data (int): node data.
         """
         if not isinstance(value, int):
@@ -53,7 +48,6 @@ class Node:
         """Gets the next node of current node.
 
         Returns:
-
             Next node of current node.
         """
         return self.__next_node
@@ -63,11 +57,9 @@ class Node:
         """Sets the next node of the current node.
 
         Args:
-
             value (Node): next node of current node.
 
         Attributes:
-
             __next_node (Node): next node of current node.
         """
         if not isinstance(value, Node) and value is not None:
@@ -76,13 +68,12 @@ class Node:
 
 
 class SinglyLinkedList:
-    """ Represents a single linked list."""
+    """Represents a single linked list."""
 
     def __init__(self):
         """Initializes a single linked list.
 
         Attributes:
-
             __head (Node): head node of single linked list.
         """
         self.__head = None
@@ -91,7 +82,6 @@ class SinglyLinkedList:
         """Inserts a new node in the single linked list in ascending order.
 
         Args:
-
             value (int): value of the new node
         """
         new = Node(value)
@@ -112,7 +102,6 @@ class SinglyLinkedList:
         """Defines the print representation of the single linked list.
 
         Returns:
-
             String containing each data of each node of the single linked list:
         """
         tmp = self.__head

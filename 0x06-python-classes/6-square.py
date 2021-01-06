@@ -8,9 +8,11 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializes instance of square.
+
         Args:
             size (int): size of square.
             position (tuple): position of square.
+
         Attributes:
             size (method): sets a square size.
             posiition (method): sets a square position.
@@ -21,6 +23,7 @@ class Square:
     @property
     def size(self):
         """Gets a square size.
+
         Returns:
             Current size of square.
         """
@@ -29,8 +32,10 @@ class Square:
     @size.setter
     def size(self, value):
         """Sets a square size.
+
         Args:
             value (int): size of square.
+
         Attributes:
             __size (int): size of square.
         """
@@ -43,6 +48,7 @@ class Square:
     @property
     def position(self):
         """Gets a square position.
+
         Returns:
             Tuple of square position.
         """
@@ -51,6 +57,7 @@ class Square:
     @position.setter
     def position(self, value):
         """Sets a square position.
+
         Args:
             value (tuple): position of current square.
         """
@@ -63,6 +70,7 @@ class Square:
 
     def area(self):
         """Returns the current square area.
+
         Returns:
             Current square area.
         """

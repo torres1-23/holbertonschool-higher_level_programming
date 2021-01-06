@@ -10,12 +10,10 @@ class Square:
         """Initializes instance of square.
 
         Args:
-
             size (int): size of square.
             position (tuple): position of square.
 
         Attributes:
-
             size (method): sets a square size.
             posiition (method): sets a square position.
         """
@@ -27,7 +25,6 @@ class Square:
         """Gets a square size.
 
         Returns:
-
             Current size of square.
         """
         return self.__size
@@ -37,11 +34,9 @@ class Square:
         """Sets a square size.
 
         Args:
-
             value (int): size of square.
 
         Attributes:
-
             __size (int): size of square.
         """
         if not isinstance(value, int):
@@ -55,7 +50,6 @@ class Square:
         """Gets a square position.
 
         Returns:
-
             Tuple of square position.
         """
         return self.__position
@@ -65,7 +59,6 @@ class Square:
         """Sets a square position.
 
         Args:
-
             value (tuple): position of current square.
         """
         if (not isinstance(value, tuple) or len(value) != 2 or
@@ -79,7 +72,6 @@ class Square:
         """Returns the current square area.
 
         Returns:
-
             Current square area.
         """
         return self.__size ** 2
@@ -102,7 +94,6 @@ class Square:
         """Defines the print representation of the square.
 
         Returns:
-
             String representation of square.
         """
         string = ""

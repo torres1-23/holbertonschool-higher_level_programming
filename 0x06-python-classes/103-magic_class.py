@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import math
 """Replicates a given bytecode"""
+import math
 
 
 class MagicClass:

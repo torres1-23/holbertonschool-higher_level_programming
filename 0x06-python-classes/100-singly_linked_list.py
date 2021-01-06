@@ -10,9 +10,12 @@ class Node:
         """Initializes instance of a node.
 
         Args:
+
             data (int): data of each node.
             next_node (Node): next node of new node.
+
         Attributes:
+
             data (method): sets the node data.
             next_node (method): sets the next node to point.
         """
@@ -24,6 +27,7 @@ class Node:
         """Gets the node data.
 
         Returns:
+
             Current node data.
         """
         return self.__data
@@ -31,9 +35,13 @@ class Node:
     @data.setter
     def data(self, value):
         """Sets a square size.
+
         Args:
+
             value (int): node data.
+
         Attributes:
+
             __data (int): node data.
         """
         if not isinstance(value, int):
@@ -43,7 +51,9 @@ class Node:
     @property
     def next_node(self):
         """Gets the next node of current node.
+
         Returns:
+
             Next node of current node.
         """
         return self.__next_node
@@ -51,9 +61,13 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """Sets the next node of the current node.
+
         Args:
+
             value (Node): next node of current node.
+
         Attributes:
+
             __next_node (Node): next node of current node.
         """
         if not isinstance(value, Node) and value is not None:
@@ -66,14 +80,18 @@ class SinglyLinkedList:
 
     def __init__(self):
         """Initializes a single linked list.
+
         Attributes:
+
             __head (Node): head node of single linked list.
         """
         self.__head = None
 
     def sorted_insert(self, value):
         """Inserts a new node in the single linked list in ascending order.
+
         Args:
+
             value (int): value of the new node
         """
         new = Node(value)
@@ -92,13 +110,16 @@ class SinglyLinkedList:
 
     def __str__(self):
         """Defines the print representation of the single linked list.
+
         Returns:
+
             String containing each data of each node of the single linked list:
         """
         tmp = self.__head
         string = ""
-        while tmp.next_node:
-            string += str(tmp.data) + '\n'
-            tmp = tmp.next_node
-        string += str(tmp.data)
+        if tmp:
+            while tmp.next_node:
+                string += str(tmp.data) + '\n'
+                tmp = tmp.next_node
+            string += str(tmp.data)
         return string

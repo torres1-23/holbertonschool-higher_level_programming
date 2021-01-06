@@ -42,7 +42,7 @@ Class Node that defines a node of a singly linked list with:
     * data attribute.
     * methods getter and setter with validation for data.
     * next_node attribute.
-    * methods getter and setter with validation for next_node.
+    * methods getter and setter with validation for next_node.\
 Class SinglyLinkedList that defines a singly linked list with:
     * head attribute.
     * method to handle print().

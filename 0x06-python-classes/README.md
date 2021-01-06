@@ -42,7 +42,7 @@
     * data attribute.
     * methods getter and setter with validation for data.
     * next_node attribute.
-    * methods getter and setter with validation for next_node.
+    * methods getter and setter with validation for next_node.\n
   Class SinglyLinkedList that defines a singly linked list with:
     * head attribute.
     * method to handle print().

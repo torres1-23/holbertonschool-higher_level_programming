@@ -55,7 +55,7 @@ class MagicClass:
                 16 BINARY_MULTIPLY
                 17 RETURN_VALUE
     """
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """Initializes instance of magic object .
 
         Args:

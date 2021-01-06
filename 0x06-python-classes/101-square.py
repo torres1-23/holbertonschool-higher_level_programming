@@ -106,9 +106,7 @@ class Square:
             String representation of square.
         """
         string = ""
-        if self.__size == 0:
-            string += "\n"
-        else:
+        if self.__size != 0:
             for i in range(self.__position[1]):
                 string += "\n"
             for i in range(self.__size - 1):

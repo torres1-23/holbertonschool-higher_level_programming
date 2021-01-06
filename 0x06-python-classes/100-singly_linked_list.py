@@ -8,6 +8,7 @@ class Node:
 
     def __init__(self, data, next_node=None):
         """Initializes instance of a node.
+
         Args:
             data (int): data of each node.
             next_node (Node): next node of new node.
@@ -21,6 +22,7 @@ class Node:
     @property
     def data(self):
         """Gets the node data.
+
         Returns:
             Current node data.
         """
@@ -35,7 +37,7 @@ class Node:
             __data (int): node data.
         """
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("data must be an integer")
         self.__data = value
 
     @property

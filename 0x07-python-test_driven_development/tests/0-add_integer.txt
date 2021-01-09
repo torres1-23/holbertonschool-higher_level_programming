@@ -15,7 +15,6 @@ Usage
 Tests
 =====
 Normal functionality:
-
     Works with positive or negative integer or floats, floats ara casted into integers before addition,
     second argument is optional, by default is 98:
 
@@ -40,7 +39,6 @@ Normal functionality:
     108
 
 Exceptions:
-
     "add_integer(...)" expects that both arguments are integer or floats,
     if not TypeError will be raised.
 

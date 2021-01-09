@@ -21,7 +21,6 @@ valid matrix and a valid divisor.
 Tests
 =====
 Normal functionality:
-
     Works with positive or negative integer or floats, results are rounded up to two decimal numbers,
     original matrix is left unchanged.
 
@@ -63,7 +62,6 @@ Normal functionality:
     [[]]
 
 Exceptions:
-
     matrix must be a list of lists of integers or floats,
     each row of the matrix must be of the same size,
     if not TypeError will be raised.

@@ -14,8 +14,10 @@ Usage
 
 Tests
 =====
-Normal functionality: (works with positive or negative integer or floats, floats ara casted into integers before addition).
-Second argument is optional, by default is 98:
+Normal functionality:
+
+    Works with positive or negative integer or floats, floats ara casted into integers before addition,
+    second argument is optional, by default is 98:
 
 ::
     >>> add_integer(100, -98)
@@ -38,7 +40,9 @@ Second argument is optional, by default is 98:
     108
 
 Exceptions:
-"add_integer(...)" expects that both arguments are integer or floats, if not TypeError will be raised.
+
+    "add_integer(...)" expects that both arguments are integer or floats,
+    if not TypeError will be raised.
 
 ::
     >>> add_integer("1", 2)
@@ -80,31 +84,8 @@ Exceptions:
     ...
     ValueError: cannot convert float NaN to integer
 
-
 ::
     >>> add_integer(-98, float('nan'))
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
-
-"add_integer(...)" will fail if syntax is wrong.
-
-::
-    >>> add_integer(-98, 7po)
-    Traceback (most recent call last):
-    ...
-    SyntaxError: invalid syntax
-
-"add_integer(...)" will fail if required arguments are not given.
-
-::
-    >>> add_integer()
-    Traceback (most recent call last):
-    ...
-    TypeError: add_integer() missing 1 required positional argument: 'a'
-
-::
-    >>> add_integer(7, -987, 7)
-    Traceback (most recent call last):
-    ...
-    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given

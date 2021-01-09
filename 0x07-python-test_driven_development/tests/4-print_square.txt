@@ -2,8 +2,8 @@
 The module 4-print_square.py
 ============================
 This module defines a print function
-   "def print_square(size)"
-   that prints a square using the "#" character".
+"def print_square(size)"
+that prints a square using the "#" character".
 
 Usage
 =====

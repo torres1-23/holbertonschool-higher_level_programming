@@ -12,6 +12,7 @@ Usage:
 
 def print_square(size):
     """ Prints a square.
+
     Args:
         size (int): size of the square.
 

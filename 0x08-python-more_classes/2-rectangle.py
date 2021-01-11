@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-"""This module defines an empty class Rectangle.
+"""This module defines a class Rectangle.
 
 Usage:
-    Class Rectangle is used to instanciate empty rectangles.
+    Class Rectangle is used to instanciate rectangles.
 """
 
 

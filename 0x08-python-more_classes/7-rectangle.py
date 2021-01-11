@@ -110,7 +110,8 @@ class Rectangle:
         """Defines the printable representation of a rectangle.
 
         Returns:
-            String representation of a rectangle using the current instance symbol.
+            String representation of a rectangle
+            using the current instance symbol.
         """
         string = ""
         if self.width != 0 and self.height != 0:

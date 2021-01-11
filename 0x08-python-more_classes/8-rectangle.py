@@ -145,8 +145,8 @@ class Rectangle:
             are equal returns the first instance.
 
         Raises:
-            TypeError:
-            TypeError:
+            TypeError: if rect_1 is not an instance of Rectangle.
+            TypeError: if rect_2 is not an instance of Rectangle.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")

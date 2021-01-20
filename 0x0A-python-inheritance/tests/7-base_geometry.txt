@@ -73,6 +73,17 @@ should not receive arguments more than 2 arguments, and raises exceptions if fai
 
 ::
     >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", {1, 2})
+    Traceback (most recent call last):
+    ...
+    TypeError: my_int must be an integer
+    >>> bg.integer_validator("width", "hey")
+    Traceback (most recent call last):
+    ...
+    TypeError: width must be an integer
+
+::
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", -1)
     Traceback (most recent call last):
     ...

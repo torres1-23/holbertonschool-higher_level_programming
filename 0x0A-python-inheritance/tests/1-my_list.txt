@@ -1,12 +1,12 @@
-===================
-Module 1-my_list.py
-===================
+=======================
+The module 1-my_list.py
+=======================
 This module defines class that inherits from list.
 
 Usage
 =====
-    "class MyList(list)" is used to add new methods to the list class,
-    from which it inherates.
+"class MyList(list)" is used to add new methods to the list class,
+from which it inherates.
 
 ::
     >>> MyList = __import__('1-my_list').MyList

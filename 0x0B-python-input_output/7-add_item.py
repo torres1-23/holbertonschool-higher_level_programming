@@ -7,7 +7,6 @@ Usage:
     a list and then added to a file "add_item.json", if the file was already
     created, the list will be appended.
 """
-import json
 import sys
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file

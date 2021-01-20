@@ -84,12 +84,6 @@ Exceptions:
     TypeError: list() takes at most 1 argument (2 given)
 
 ::
-    >>> my_list = MyList([1, 2], [3, 4])
-    Traceback (most recent call last):
-    ...
-    TypeError: list() takes at most 1 argument (2 given)
-
-::
     >>> my_list.print_sorted(1)
     Traceback (most recent call last):
     ...

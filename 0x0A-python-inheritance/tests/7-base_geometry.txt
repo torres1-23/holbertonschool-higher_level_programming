@@ -89,7 +89,7 @@ should not receive arguments more than 2 arguments, and raises exceptions if fai
     TypeError: object() takes no parameters
 
 ::
-    >>> bg.integer_validator() # doctest: +NORMALIZE_WHITESPACE
+    >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'

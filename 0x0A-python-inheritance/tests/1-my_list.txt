@@ -56,9 +56,10 @@ so all list methods should work as expected.
     >>> my_list.print_sorted()
     [-45, 5, 89]
 
-Exceptions:
-    "class MyList(list)" expects one iterable argument, also, "print_sorted(...)"
-    should not receive arguments.
+Exceptions
+==========
+"class MyList(list)" expects one iterable argument, also, "print_sorted(...)"
+should not receive arguments.
 
 ::
     >>> my_list = MyList(None)

@@ -57,4 +57,4 @@ so all list methods should work as expected.
     >>> print(my_list)
     [89, -45, 5, -10, 27, 98]
     >>> my_list.print_sorted()
-    [-10, -45, 5, 27, 89, 98]
+    [-45, -10, 5, 27, 89, 98]

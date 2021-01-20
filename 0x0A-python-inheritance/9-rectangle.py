@@ -23,7 +23,7 @@ class Rectangle(BaseGeometry):
             __height (int): height of rectangle instance.
         """
         self.integer_validator("width", width)
-        self.integer_validator("heigth", height)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
 

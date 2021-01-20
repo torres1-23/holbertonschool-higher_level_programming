@@ -31,9 +31,6 @@ class Student:
         data structure (list, dictionary, string, integer
         and boolean) for JSON serialization of an object
 
-        Args:
-            obj (object): class to retrieve its dictionary.
-
         Return:
             JSON string of dictionary.
         """

@@ -77,7 +77,7 @@ should not receive arguments more than 2 arguments, and raises exceptions if fai
     Traceback (most recent call last):
     ...
     TypeError: my_int must be an integer
-    >>> bg.integer_validator("width", "hey")
+    >>> bg.integer_validator("width", None)
     Traceback (most recent call last):
     ...
     TypeError: width must be an integer

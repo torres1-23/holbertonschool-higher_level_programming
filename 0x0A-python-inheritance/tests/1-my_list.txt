@@ -1,6 +1,6 @@
-=======================
-The module 1-my_list.py
-=======================
+===================
+Module 1-my_list.py
+===================
 This module defines class that inherits from list.
 
 Usage
@@ -60,3 +60,42 @@ so all list methods should work as expected.
     [89, -45, 5, -10, 27, 98]
     >>> my_list.print_sorted()
     [-45, -10, 5, 27, 89, 98]
+
+::
+    >>> my_list = MyList()
+    >>> my_list.append("Alejo")
+    >>> my_list.append("Torres")
+    >>> my_list.append("Holberton")
+    >>> print(my_list)
+    ['Alejo', 'Torres', 'Holberton']
+    >>> my_list.print_sorted()
+    ['Alejo', 'Holberton', 'Torres']
+
+Exceptions:
+"class MyList(list)" expects one iterable argument, also, "print_sorted(...)"
+should not receive arguments.
+
+::
+    >>> my_list = MyList(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'NoneType' object is not iterable
+
+::
+    >>> my_list = MyList([1, 2], [3, 4])
+    Traceback (most recent call last):
+    ...
+    TypeError: list() takes at most 1 argument (2 given)
+    
+::
+    >>> my_list.print_sorted(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+::
+    >>> my_list = MyList([1, "Alejo", "Torres", 8])
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: str() < int()

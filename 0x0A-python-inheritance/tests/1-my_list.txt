@@ -1,6 +1,6 @@
-=======================
-Module 0-add_integer.py
-=======================
+===================
+Module 1-my_list.py
+===================
 This module defines class that inherits from list.
 
 Usage

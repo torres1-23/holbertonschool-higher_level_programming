@@ -8,7 +8,7 @@ class Square(Rectangle):
         "Rectangle".
     """
     def __init__(self, size, x=0, y=0, id=None):
-        """Initializes instance of rectangle.
+        """Initializes instance of square.
 
         Args:
             size(int): size of each instance.
@@ -29,3 +29,22 @@ class Square(Rectangle):
         """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
+
+    @property
+    def size(self):
+        """Gets size attribute of each instance.
+
+        Return:
+            Size of each instance.
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Sets size attribute of each instance.
+
+        Args:
+            value (int): value to set.
+        """
+        self.width = value
+        self.height = value

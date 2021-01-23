@@ -177,7 +177,6 @@ class Rectangle(Base):
             kwargs (dictionary): key/value pairs to update.
         """
         if args and len(args) > 0:
-            print(args)
             cont = 0
             for arg in args:
                 if cont == 0:

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines a class "class Square"."""
 from models.rectangle import Rectangle
+keys = ['id', 'size', 'x', 'y']
 
 
 class Square(Rectangle):
@@ -58,19 +59,31 @@ class Square(Rectangle):
             kwargs (dictionary): key/value pairs to update.
         """
         if args and len(args) > 0:
-            cont = 0
+            i = 0
             for arg in args:
-                if cont == 0:
-                    self.id = arg
-                if cont == 1:
-                    self.size = arg
-                if cont == 2:
-                    self.x = arg
-                if cont == 3:
-                    self.y = arg
-                cont += 1
+                if i is 0 and arg is None:
+                    continue
+                else:
+                    try:
+                        exec('self.{} = arg'.format(keys[i]))
+                        i += 1
+                    except IndexError:
+                        break
         elif kwargs and len(kwargs) > 0:
-            keys = ['id', 'size', 'x', 'y']
             for key, value in kwargs.items():
                 if key in keys:
-                    exec('self.{} = {}'.format(key, value))
+                    if key == 'id' and value is None:
+                        continue
+                    else:
+                        exec('self.{} = {}'.format(key, value))
+
+    def to_dictionary(self):
+        """Creates dictionary representation of Square.
+
+        Return:
+            dictionary with each attribute of square instance.
+        """
+        dic = {}
+        for key in keys:
+            exec('dic[key] = self.{}'.format(key))
+        return dic

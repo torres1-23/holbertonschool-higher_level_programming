@@ -176,22 +176,28 @@ class Rectangle(Base):
             args (tuple): arguments to update.
             kwargs (dictionary): key/value pairs to update.
         """
+        keys = ['id', 'width', 'height', 'x', 'y']
         if args and len(args) > 0:
-            cont = 0
+            i = 0
             for arg in args:
-                if cont == 0:
-                    self.id = arg
-                if cont == 1:
-                    self.width = arg
-                if cont == 2:
-                    self.height = arg
-                if cont == 3:
-                    self.x = arg
-                if cont == 4:
-                    self.y = arg
-                cont += 1
+                try:
+                    exec('self.{} = arg'.format(keys[i]))
+                    i += 1
+                except IndexError:
+                    break
         elif kwargs and len(kwargs) > 0:
-            keys = ['id', 'width', 'height', 'x', 'y']
             for key, value in kwargs.items():
                 if key in keys:
                     exec('self.{} = {}'.format(key, value))
+
+    def to_dictionary(self):
+        """Creates dictionary representation of Square.
+
+        Return:
+            dictionary with each attribute od square instance.
+        """
+        keys = ['id', 'width', 'height', 'x', 'y']
+        dic = {}
+        for key in keys:
+            exec('dic[key] = self.{}'.format(key))
+        return dic

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines a class "class Rectangle"."""
 from models.base import Base
+keys = ['id', 'width', 'height', 'x', 'y']
 
 
 class Rectangle(Base):
@@ -19,10 +20,8 @@ class Rectangle(Base):
             None by default.
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        for i in range(1, len(keys)):
+            exec('self.{} = {}'.format(keys[i], keys[i]))
 
     @property
     def width(self):
@@ -176,27 +175,31 @@ class Rectangle(Base):
             args (tuple): arguments to update.
             kwargs (dictionary): key/value pairs to update.
         """
-        keys = ['id', 'width', 'height', 'x', 'y']
         if args and len(args) > 0:
             i = 0
             for arg in args:
-                try:
-                    exec('self.{} = arg'.format(keys[i]))
-                    i += 1
-                except IndexError:
-                    break
+                if i is 0 and arg is None:
+                    continue
+                else:
+                    try:
+                        exec('self.{} = arg'.format(keys[i]))
+                        i += 1
+                    except IndexError:
+                        break
         elif kwargs and len(kwargs) > 0:
             for key, value in kwargs.items():
                 if key in keys:
-                    exec('self.{} = {}'.format(key, value))
+                    if key == 'id' and value is None:
+                        continue
+                    else:
+                        exec('self.{} = {}'.format(key, value))
 
     def to_dictionary(self):
-        """Creates dictionary representation of Square.
+        """Creates dictionary representation of Rectangle.
 
         Return:
-            dictionary with each attribute od square instance.
+            dictionary with each attribute of rectangle instance.
         """
-        keys = ['id', 'width', 'height', 'x', 'y']
         dic = {}
         for key in keys:
             exec('dic[key] = self.{}'.format(key))

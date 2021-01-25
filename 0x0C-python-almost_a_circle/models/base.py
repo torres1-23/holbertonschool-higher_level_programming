@@ -57,3 +57,18 @@ class Base:
                 for ins in list_objs:
                     dic_list.append(ins.to_dictionary())
                 s_file.write(Base.to_json_string(dic_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Creates a list from a JSON string representation
+        of list of dictionaries.
+
+        Args:
+            json_string (string): JSON string to convert to list.
+
+        Return:
+            list object from "json_string" argument.
+        """
+        if json_string is None or not bool(json_string):
+            return []
+        return json.loads(json_string)

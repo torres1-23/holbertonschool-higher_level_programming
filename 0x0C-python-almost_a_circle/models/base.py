@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines a class "class Base"."""
 import json
+import csv
 
 
 class Base:
@@ -106,6 +107,49 @@ class Base:
                 new_list = Base.from_json_string(s_file.read())
                 for instance in new_list:
                     ins_list.append(cls.create(**instance))
+                return ins_list
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Writes the CSV string representation of list_objs to a file.
+
+        Args:
+            list_objs (list): List of dictionaries of instances to save.
+        """
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, mode='w', encoding='UTF8') as s_file:
+            if list_objs is None:
+                s_file.write('[]')
+            else:
+                if cls.__name__ == 'Rectangle':
+                    key_list = ['id', 'width', 'height', 'x', 'y']
+                if cls.__name__ == 'Square':
+                    key_list = ['id', 'size', 'x', 'y']
+                for ins in list_objs:
+                    writer = csv.DictWriter(s_file, fieldnames=key_list)
+                    writer.writerow(ins.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Loads a CSV string from file, obtains list rep
+        and creates each instance passed.
+
+        Return:
+            list of Rectangle or Square instances.
+        """
+        filename = "{}.csv".format(cls.__name__)
+        try:
+            with open(filename, mode='r', encoding='UTF8') as s_file:
+                ins_list = []
+                if cls.__name__ == 'Rectangle':
+                    key_list = ['id', 'width', 'height', 'x', 'y']
+                if cls.__name__ == 'Square':
+                    key_list = ['id', 'size', 'x', 'y']
+                dic = csv.DictReader(s_file, fieldnames=key_list)
+                for dictio in dic:
+                    ins_list.append(cls.create(**dictio))
                 return ins_list
         except FileNotFoundError:
             return []

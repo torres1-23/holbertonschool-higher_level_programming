@@ -75,13 +75,14 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Creates an instance with all attributes already set.
+        """Creates an instance with all attributes already set
+        from a dictionary.
 
         Args:
             kwargs (dictionary): key/value pairs to set.
 
         Return:
-            Instance of class with attributes settealready set.
+            Instance of class with attributes already set.
         """
         if cls.__name__ == 'Rectangle':
             new_ins = cls(1, 1)
@@ -89,3 +90,22 @@ class Base:
             new_ins = cls(1)
         new_ins.update(**dictionary)
         return new_ins
+
+    @classmethod
+    def load_from_file(cls):
+        """Loads a JSON string from file, obtains list rep
+        and creates each instance passed.
+
+        Return:
+            list of Rectangle or Square instances.
+        """
+        filename = "{}.json".format(cls.__name__)
+        try:
+            ins_list = []
+            with open(filename, mode='r', encoding='UTF8') as s_file:
+                new_list = Base.from_json_string(s_file.read())
+                for instance in new_list:
+                    ins_list.append(cls.create(**instance))
+                return ins_list
+        except FileNotFoundError:
+            return []

@@ -232,11 +232,15 @@ class TestBase03(unittest.TestCase):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
+    
+    def test_05(self):
+        """Check if list saved is OK when
+        no argument for Square."""
         Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
-    def test_05(self):
+    def test_06(self):
         """Checks exception raises."""
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()

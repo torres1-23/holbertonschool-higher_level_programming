@@ -219,20 +219,24 @@ class TestBase03(unittest.TestCase):
     def test_03(self):
         """Check if list saved is OK when
         no argument."""
-        Square.save_to_file(None)
-        with open("Square.json", "r") as f:
-            self.assertEqual("[]", f.read())
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
+
+    def test_04(self):
+        """Check if list saved is OK when
+        no argument."""
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
         Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
-    def test_04(self):
+    def test_05(self):
         """Checks exception raises."""
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()

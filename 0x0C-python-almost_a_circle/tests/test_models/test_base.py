@@ -231,7 +231,6 @@ class TestBase03(unittest.TestCase):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
-        
 
     def test_04(self):
         """Checks exception raises."""

@@ -12,5 +12,5 @@ CREATE TABLE
         name VARCHAR(256) NOT NULL,
         PRIMARY KEY (id),
         FOREIGN KEY (state_id)
-            REFERENCES states(id)
+            REFERENCES hbtn_0d_usa.states(id)
     );

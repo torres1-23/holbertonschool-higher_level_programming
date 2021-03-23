@@ -1,5 +1,5 @@
 #!/usr/bin/node
 // Function that returns the reversed version of a list.
 exports.esrever = function (list) {
-  return list.reverse();
+  return list.map((item, idx) => list[list.length - 1 - idx]);
 };

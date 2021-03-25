@@ -19,7 +19,8 @@ if __name__ == '__main__':
                    "  FROM cities"
                    "  INNER JOIN states"
                    "    ON cities.state_id = states.id"
-                   "  WHERE states.name = %s", (sys.argv[4], ))
+                   "  WHERE states.name = %s"
+                   "  ORDER BY cities.id", (sys.argv[4], ))
     for row in cursor.fetchall():
         myList.append(row[0])
     print(', '.join(myList))

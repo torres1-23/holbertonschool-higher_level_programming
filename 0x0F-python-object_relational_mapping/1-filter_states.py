@@ -14,6 +14,7 @@ if __name__ == '__main__':
     cursor = db.cursor()
     cursor.execute("SELECT *"
                    "  FROM states"
-                   "  WHERE name REGEXP '^N'")
+                   "  WHERE name REGEXP '^N'"
+                   "  ORDER BY states.id")
     for row in cursor.fetchall():
         print(row)

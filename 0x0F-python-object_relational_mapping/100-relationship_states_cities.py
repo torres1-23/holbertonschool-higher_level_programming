@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+"""This module creates a table with relationships.
+
+Usage:
+    Should take 3 arguments: 'mysql username', 'mysql password' and
+    'database name', creates tables 'states' and 'cities' and adds one state
+    with relationship to a city.
 """
 import sys
 from sqlalchemy.orm import sessionmaker

@@ -1,3 +1,3 @@
 #!/bin/bash
 # Script that sends a JSON POST request to a URL passed as the first argument, and displays the body of the response.
-curl -sd "data-binary=@"$2"" "$1"
+curl -sd "$(cat "$2")" "$1"

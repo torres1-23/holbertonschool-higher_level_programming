@@ -1,2 +1,1 @@
-# Time complexity of function peak.
 O(nlog(n))

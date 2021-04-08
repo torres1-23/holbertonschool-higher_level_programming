@@ -1,1 +1,2 @@
+# Big O of peak function.
 O(log(n))

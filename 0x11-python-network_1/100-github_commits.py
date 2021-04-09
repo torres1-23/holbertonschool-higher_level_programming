@@ -14,6 +14,9 @@ if __name__ == "__main__":
                                                               sys.argv[1])
     request = requests.get(url)
     coms = request.json()
-    for i in range(10):
-        print('{}: {}'.format(coms[i].get('sha'), coms[i].get('commit')
-                              .get('author').get('name')))
+    try:
+        for i in range(10):
+            print('{}: {}'.format(coms[i].get('sha'), coms[i].get('commit')
+                                  .get('author').get('name')))
+    except:
+        pass

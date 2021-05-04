@@ -10,7 +10,7 @@ request.get(process.argv[2], function (err, res, body) {
     for (const i in moviesList) {
       const charactersList = moviesList[i].characters;
       for (const j in charactersList) {
-        if (charactersList[j] === `https://swapi-api.hbtn.io/api/people/${id}/`) {
+        if (charactersList[j].includes(d)) {
           cont++;
         }
       }

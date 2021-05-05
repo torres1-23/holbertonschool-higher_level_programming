@@ -8,14 +8,19 @@ request(url, function (err, res, body) {
     return;
   }
   const listCharacters = JSON.parse(body).characters;
-  for (const i in listCharacters) {
-    request(listCharacters[i], function (err, res, body) {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      const name = JSON.parse(body).name
-      console.log(name);
-    });
-  }
+  printCharacter(listCharacters, 0);
 });
+
+function printCharacter (listCharacters, i) {
+  request(listCharacters[i], function (err, res, body) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const name = JSON.parse(body).name;
+    console.log(name);
+    if (i < listCharacters.length - 1) {
+      printCharacter(listCharacters, i + 1);
+    }
+  });
+}

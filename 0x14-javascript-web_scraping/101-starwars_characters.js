@@ -13,12 +13,12 @@ request(url, function (err, res, body) {
   }
 });
 
-async function getCharacters (url) {
+function getCharacters (url) {
   request(url, async function (err, res, body) {
     if (err) {
       console.error(err);
       return;
     }
-    console.log(await JSON.parse(body).name);
+    await console.log(JSON.parse(body).name);
   });
 }

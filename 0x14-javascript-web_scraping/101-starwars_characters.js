@@ -9,16 +9,13 @@ request(url, function (err, res, body) {
   }
   const listCharacters = JSON.parse(body).characters;
   for (const i in listCharacters) {
-    getCharacters(listCharacters[i]);
+    request(listCharacters[i], function (err, res, body) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      const name = JSON.parse(body).name
+      console.log(name);
+    });
   }
 });
-
-function getCharacters (url) {
-  request(url, async function (err, res, body) {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    await console.log(JSON.parse(body).name);
-  });
-}
